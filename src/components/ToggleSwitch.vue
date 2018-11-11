@@ -68,8 +68,8 @@ export default {
   &__circle {
     cursor: pointer;
     display: block;
-    top: 0px;
-    left: 0px;
+    top: 0;
+    left: 0;
     position: absolute;
     width: 20px;
     height: 20px;
