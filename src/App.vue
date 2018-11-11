@@ -8,9 +8,8 @@
 import ToggleSwitch from "./components/ToggleSwitch";
 
 export default {
-  components: {ToggleSwitch},
   name: 'app',
-  component : {
+  components: {
     ToggleSwitch
   },
   data: function () {
