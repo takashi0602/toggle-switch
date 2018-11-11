@@ -6,7 +6,7 @@
         <span class="switch__content"></span>
         <span class="switch__circle"></span>
       </label>
-      <span class="switch__text">{{ display() }}</span>
+      <span class="switch__text">{{ checked }}</span>
     </div>
   </div>
 </template>
@@ -82,11 +82,6 @@ export default {
     left: 18px;
     background-color: #009688;
   }
-  &__checked ~ &__content {
-    border-color: transparent;
-    transition: all 0s;
-  }
-
   &__checked ~ &__content:after {
     background-color: #009688;
     opacity: 0.5;
