@@ -1,12 +1,12 @@
 <template>
   <div id="app">
-    <div class="switch3">
-      <label class="switch3__label">
-        <input type="checkbox" :class="{'switch3__input': true, 'switch3__checked': checked}" v-model="checked"/>
-        <span class="switch3__content"></span>
-        <span class="switch3__circle"></span>
+    <div class="switch">
+      <label class="switch__label">
+        <input type="checkbox" :class="{'switch__input': true, 'switch__checked': checked}" v-model="checked"/>
+        <span class="switch__content"></span>
+        <span class="switch__circle"></span>
       </label>
-      <span class="switch3__text">{{ display() }}</span>
+      <span class="switch__text">{{ display() }}</span>
     </div>
   </div>
 </template>
@@ -36,12 +36,15 @@ export default {
 </script>
 
 <style lang="scss">
-.switch3 {
+.switch {
   &__label {
     width: 37px;
     position: relative;
     display: inline-block;
     padding-top: 3px;
+  }
+  &__input {
+    display: none;
   }
   &__content {
     display: block;
@@ -49,8 +52,7 @@ export default {
     border-radius: 7px;
     height: 14px;
     background-color: #e0e0e0;
-    transition: all .1s .4s;
-    overflow: hidden;
+    transition: all .5s;
     &:after {
       content: "";
       display: block;
@@ -63,9 +65,6 @@ export default {
       transition: all .5s;
     }
   }
-  &__input {
-    display: none;
-  }
   &__circle {
     cursor: pointer;
     display: block;
@@ -74,7 +73,7 @@ export default {
     position: absolute;
     width: 20px;
     height: 20px;
-    border-radius: 10px;
+    border-radius: 50%;
     background-color: #F1F1F1;
     transition: all .5s;
     box-shadow: 0 2px 2px #ccc;
