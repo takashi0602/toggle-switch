@@ -6,7 +6,7 @@
         <span class="switch__content"></span>
         <span class="switch__circle"></span>
       </label>
-      <span class="switch__text">{{ checked }}</span>
+      <span class="switch__text">{{ display() }}</span>
     </div>
   </div>
 </template>
@@ -14,7 +14,7 @@
 <script>
 export default {
   name: 'toggle-switch',
-  data: function () {
+  data() {
     return {
       msg: [
         '表示する',
@@ -24,7 +24,7 @@ export default {
     }
   },
   methods: {
-    display: function() {
+    display() {
       if(this.checked) {
         return this.msg[0];
       }else{
